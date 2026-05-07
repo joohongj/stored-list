@@ -1,5 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -40,7 +41,7 @@ app.use(function(err, req, res, next) {
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URL, { 
-    dbName: 'your_database' // Update this to your name of your database
+    dbName: 'example' // Update this to your name of your database
  })
     .then(function() {
         console.log('Connected to MongoDB!');
@@ -48,6 +49,5 @@ mongoose.connect(process.env.MONGODB_URL, {
     .catch(function(error) {
         console.log('Error connecting to MongoDB.');
     })
-
 
 module.exports = app;
