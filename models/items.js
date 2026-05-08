@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
   name: String,
-  favoriteFood: String,
-  isInstructor: Boolean,
+  quote: String,
+  job: Boolean,
 
 });
 
