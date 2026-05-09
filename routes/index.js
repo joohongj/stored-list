@@ -1,17 +1,14 @@
 var express = require('express');
 var router = express.Router();
-//    USERS INSTEAD OF ITEMS!!!!
-const Users = require('../models/users');
+const Items = require('../models/items');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
     // Your code goes here
-    //    USERS INSTEAD OF ITEMS!!!!
-    Users.find()
+    Items.find()
         .then(function (data) {
             console.log(data);
-            //    USERS INSTEAD OF ITEMS!!!!
-            res.render('index', { title: 'Users', list: data })
+            res.render('index', { title: 'Items', list: data })
         })
         .catch(function (error) {
             console.log('Something went wrong', error);
