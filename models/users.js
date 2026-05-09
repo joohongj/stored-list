@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 const schema = new mongoose.Schema({
   name: String,
   quote: String,
-  job: Boolean,
+  job: String,
 
 });
 
+module.exports = mongoose.model('users', schema);
 
-// used to be users!!!
-module.exports = mongoose.model('items', schema);
+
